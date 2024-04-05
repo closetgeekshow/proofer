@@ -1,0 +1,41 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/
+
+# Project
+
+## Metadata
+- name: "Project Name"
+- unique_identifier: "123456789"
+- url: "https://example.com"
+- date_created: "2024-04-05"
+- date_updated: "2024-04-05"
+- client_name: "TestCorp"
+- platform_name: "TestingConnect"
+
+
+
+# Sitemap
+
+* Home (Page)
+  * Contact (Form)
+    * Confirmation Message (Overlay)
+  * Services (Page)
+
+## Graphs
+
+- Flow Graph (object)
+    - type: "Graph"
+    - format: "mermaid"
+    - data: |
+        %% flowchart
+        graph TD;
+            A[Home] -->|Click| B[Services];
+            A -->|Click| C[Contact];
+            C -->|Submit| D[Confirmation Message];
+
+# Data Structures
+
+## Page (object)
++ id: Page_Name (string, required)
++ name: `Hello World` (string)
++ type: 'Page', 'Form', 'Overlay' (enum)
